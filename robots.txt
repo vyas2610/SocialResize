@@ -1,5 +1,5 @@
 # Robots.txt for SocialResize
-# https://YOUR-DOMAIN.com/robots.txt
+# https://vyas2610.github.io/SocialResize/robots.txt
 
 User-agent: *
 Allow: /
@@ -9,4 +9,4 @@ Disallow: /scratch/
 Disallow: /.git/
 
 # Sitemap Location
-Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+Sitemap: https://vyas2610.github.io/SocialResize/sitemap.xml

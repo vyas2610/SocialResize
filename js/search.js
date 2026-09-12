@@ -179,6 +179,18 @@
       });
     }
 
+    function resolveUrl(targetUrl) {
+      var clean = targetUrl.replace(/^\//, "");
+      var inGuides = window.location.pathname.indexOf("/guides/") !== -1;
+      if (inGuides) {
+        if (clean.indexOf("guides/") === 0) {
+          return clean.replace(/^guides\//, "");
+        }
+        return "../" + clean;
+      }
+      return "./" + clean;
+    }
+
     function renderResults(rawQuery) {
       const query = rawQuery.trim().toLowerCase();
       if (!resultsContainer) return;
@@ -187,21 +199,21 @@
         resultsContainer.innerHTML = `
           <div class="search-category-header">Popular Tools</div>
           <div class="search-quick-links">
-            <a href="/instagram-image-resizer.html" class="search-result-item">
+            <a href="${resolveUrl("/instagram-image-resizer.html")}" class="search-result-item">
               <span class="search-item-badge">Tool</span>
               <div class="search-item-content">
                 <div class="search-item-title">Instagram Image Resizer</div>
                 <div class="search-item-desc">Portrait, square, and landscape feed posts</div>
               </div>
             </a>
-            <a href="/youtube-thumbnail-resizer.html" class="search-result-item">
+            <a href="${resolveUrl("/youtube-thumbnail-resizer.html")}" class="search-result-item">
               <span class="search-item-badge">Tool</span>
               <div class="search-item-content">
                 <div class="search-item-title">YouTube Thumbnail Resizer</div>
                 <div class="search-item-desc">1280x720 HD thumbnails under 2MB</div>
               </div>
             </a>
-            <a href="/social-media-image-sizes.html" class="search-result-item">
+            <a href="${resolveUrl("/social-media-image-sizes.html")}" class="search-result-item">
               <span class="search-item-badge">Guide</span>
               <div class="search-item-content">
                 <div class="search-item-title">Social Media Image Sizes Guide</div>
@@ -232,7 +244,7 @@
       let html = "";
       matches.forEach((item, idx) => {
         html += `
-          <a href="${item.url}" class="search-result-item" role="option" data-index="${idx}">
+          <a href="${resolveUrl(item.url)}" class="search-result-item" role="option" data-index="${idx}">
             <span class="search-item-badge search-badge-${item.category.toLowerCase()}">${item.category}</span>
             <div class="search-item-content">
               <div class="search-item-title">${highlightMatch(item.title, query)}</div>

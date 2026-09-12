@@ -15,7 +15,7 @@ const CONFIG = {
   ADSENSE_CLIENT_ID: "ca-pub-XXXXXXXXXXXXXXXX",
 
   // Production domain for canonical links and social share URLs
-  PRODUCTION_DOMAIN: "https://YOUR-DOMAIN.com",
+  PRODUCTION_DOMAIN: "https://vyas2610.github.io/SocialResize",
 
   // Administrative and support contact email
   SUPPORT_EMAIL: "deepakvyas261092@gmail.com"
