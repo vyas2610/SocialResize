@@ -1,0 +1,14 @@
+# Dependencies and environment
+node_modules/
+.env
+.env.local
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+scratch/
+.system_generated/

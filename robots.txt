@@ -1,0 +1,12 @@
+# Robots.txt for SocialResize
+# https://YOUR-DOMAIN.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow administrative and temporary files if any
+Disallow: /scratch/
+Disallow: /.git/
+
+# Sitemap Location
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
