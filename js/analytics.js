@@ -12,7 +12,7 @@
   const isConfigured = measurementId && measurementId !== "G-XXXXXXXXXX";
 
   // Initialize GA4 tag only if real ID is provided
-  if (isConfigured) {
+  if (isConfigured && !window.gtag) {
     const script = document.createElement("script");
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;

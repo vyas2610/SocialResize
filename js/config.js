@@ -6,7 +6,7 @@
  */
 const CONFIG = {
   // Replace with your Google Analytics 4 Measurement ID (e.g. G-1234567890)
-  GA4_MEASUREMENT_ID: "G-XXXXXXXXXX",
+  GA4_MEASUREMENT_ID: "G-JKW7VV6NXZ",
 
   // Replace with your Google Search Console HTML tag verification code
   GOOGLE_SITE_VERIFICATION: "YOUR_VERIFICATION_CODE",
